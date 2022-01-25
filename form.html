@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fv.css">
+  <title>University</title>
+</head>
+<body>
+	<!-- Header -->
+	<section id="header">
+		<div class="header container">
+		  <div class="nav-bar">
+			<div class="brand">
+			  <a href="#home">
+				<h1><span>C</span>HRIST <span>U</span>NIVERSITY</h1>
+			  </a>
+			</div>
+			<div class="nav-list">
+			  <div class="hamburger">
+				<div class="bar"></div>
+			  </div>
+			  <ul>
+				<li><a href="Home.html" data-after="Home">HOME</a></li>
+				<li><a href="#academics" data-after="Academics">ACADEMICS</a></li>
+				<li><a href="campuses" data-after="Campuses">CAMPUSES</a></li>
+				<li><a href="#visitors" data-after="Visitors">VISITORS</a></li>
+				<li><a href="#contact" data-after="Contact">CONTACT</a></li>
+				<li><a href="Login.html" data-after="E-Services">E-SERVICES</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  <!-- End Header -->
+	<div id='wrap'>
+		<h1 title='how forms should be done.'>REGISTRATION FORM</h1>
+		<section class='form'>
+			<form action="" method="post" novalidate>
+				<fieldset>
+					<div class="field">
+						<label>
+							<span>NAME</span>
+							<input data-validate-length-range="6" data-validate-words="2" name="name" placeholder="ex. yash pathak" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Name is required</p>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>
+							<span>OCCUPATION</span>
+							<input class='optional' name="occupation" data-validate-length-range="5,15" type="text" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>An optional field. This field is only validated when it has a value.<br /><em>Minimum 5 chars, maximum 15</em></p>
+							</div>
+						</div>
+                        <span class='extra'>(optional)</span>
+					</div>
+					<div class="field">
+						<label>
+							<span>EMAIL</span>
+							<input name="email" class='email' required="required" type="email" />
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>CONFIRM EMAIL ADDRESS</span>
+							<input type="email" class='email' name="confirm_email" data-validate-linked='email' required='required'>
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>PHONE NO.</span>
+							<input type="number" class='number' name="number" data-validate-minmax="10,100" required='required'>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Number must be between 1 and 10</p>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>
+							<span>DATE</span>
+							<input class='date' type="date" name="date" required='required'>
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>TIME</span>
+							<input class='time' type="time" name="time" required='required'>
+							<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Format should be: XX:XX</p>
+							</div>
+						</div>
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>PASSWORD</span>
+							<input type="password" name="password" data-validate-length="6,8" required='required'>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Should be of length 6 OR 8 characters</p>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>
+							<span>REPEAT PASSWORD</span>
+							<input type="password" name="password2" data-validate-linked='password' required='required'>
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>TELEPHONE</span>
+							<input type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20">
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>
+							<span>COUNTRY</span>
+							<select required name="dropdown">
+								<option value="">-- please select --</option>
+								<option value="o1">Afghanistan</option>
+								<option value="o2">Argentina</option>
+								<option value="o3">Australia</option>
+								<option value="o4">Bahamas</option>
+								<option value="o5">Bangladesh</option>
+								<option value="o6">Bhutan</option>
+								<option value="o7">Cambodia</option>
+								<option value="o8">Egypt</option>
+								<option value="o9">India</option>
+								<option value="o10">Indonesia</option>
+								<option value="o11">Nepal</option>
+								<option value="o13">Sri Lanka</option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose something or choose not. what shall it be?</p>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>
+							<span>URL</span>
+							<input name="url" placeholder="http://www.website.com" required="required" type="url" />
+						</label>
+					</div>
+
+					<div class="field">
+						<label>
+							<span>CHECKBOX</span>
+							<input required="required" type="checkbox" />
+							<span>I agree</span>
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>FILE UPLOAD</span>
+							<input type='file' required>
+						</label>
+					</div>
+					<div class="field">
+						<label>
+							<span>MESSAGE</span>
+							<textarea required="required" name='message'></textarea>
+						</label>
+					</div>
+				</fieldset>
+				<button type='submit'>SUBMIT</button>
+                <button type='reset'>RESET</button>
+			</form>
+		</section>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="multifield.js"></script>
+    <script src="validator.js"></script>
+	<script>
+		// initialize a validator instance from the "FormValidator" constructor.
+        // A "<form>" element is optionally passed as an argument, but is not a must
+		var validator = new FormValidator({"events" : ['blur', 'paste', 'change']}, document.forms[0]);
+
+		validator.texts.mySpecialInput = "wrong input" // custom error message for pattern mismatch
+
+        // on form "submit" event
+		document.forms[0].onsubmit = function(e){
+			var submit = true,
+					validatorResult = validator.checkAll(this);
+
+			console.log(validatorResult);
+			return !!validatorResult.valid;
+		}
+
+		// on form "reset" event
+		document.forms[0].onreset = function(e){
+				validator.reset();
+		}
+
+        // stuff related ONLY for this demo page:
+		$('.toggleValidationTooltips').change(function(){
+			validator.settings.alerts = !this.checked;
+
+			if( this.checked )
+				$('form .alert').remove();
+		}).prop('checked',false);
+	</script>
+</body>
+</html>
