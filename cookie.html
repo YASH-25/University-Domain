@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cook.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>University</title>
+</head>
+<body>
+    <div class="popup-screen">
+        <div class="popup-box">
+          <i class="fas fa-times close-btn"></i>
+          <h2>COOKIE</h2>
+          <p>Welcome to Christ University by accepting cookies you will get updates of hapennings in our university</p>
+          <a href="#" class="btn">Subscribe</a>
+        </div>
+      </div>
+  
+      <section class="home">
+        <div class="image">
+          <img src="buss.jpg" alt="">
+        </div>
+        <div class="info">
+          <h2>ABOUT CHRIST DEEMED TO BE UNIVERSITY</h2>
+          <p>CHRIST (Deemed to be University), is a deemed to be university in Bangalore, Karnataka, India. Founded in 1969 as an autonomous college, on 22 July 2008 it was declared as an institution deemed to be university under section 3 of UGC Act 1956 by the Ministry of Education (India). The university is under the management of the priests of the Catholic religious order, Carmelites of Mary Immaculate (CMI), part of Syro Malabar Major Archiepiscopal Church. In 2016, the University was accredited by National Assessment and Accreditation Council with A Grade.</p>
+          <p>CHRIST (Deemed to be University) was born out of the educational vision of St. Kuriakose Elias Chavara, an educationalist and social reformer of the nineteenth century in South India. Chavara founded the first indigenous Catholic congregation Carmelites of Mary Immaculate (CMI) in 1831, which administers CHRIST (Deemed to be University). Established in 1969 as Christ College, the University Grants Commission (UGC) of India conferred Autonomy to the Christ College in 2004[8] and identified it as an institution with Potential for Excellence in 2006.[9] In 2008 under section 3 of the UGC Act, 1956, the Ministry of Human Resource Development of the Government of India, declared the institution a Deemed to be University, in the name and style of 'Christ University'. Later in 2018, upon the direction of Supreme Court of India, the word 'University' was removed thus making it Christ (Deemed to be University). Christ was one of the first institutions in India to be accredited in 1998 by the National Assessment and Accreditation Council (NAAC), and subsequently in 2004 and 2016 had been awarded Grade 'A' on 4-point scale.</p>
+        </div>
+      </section>
+
+      <script type="text/javascript">
+        const popupScreen = document.querySelector(".popup-screen");
+        const popupBox = document.querySelector(".popup-box");
+        const closeBtn = document.querySelector(".close-btn");
+    
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            popupScreen.classList.add("active");
+          }, 2000); //Popup the screen in 02 seconds after the page is loaded.
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          popupScreen.classList.remove("active"); //Close the popup screen on click the close button.
+          //Create a cookie for a day (to expire within a day) on click the close button.
+          document.cookie = "WebsiteName=testWebsite; max-age=" + 24 * 60 * 60; //1 day = 24 hours = 24*60*60
+        });
+    
+        //Use the created cookie to hide or show the popup screen.
+        const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
+    
+        if(WebsiteCookie != -1){
+          popupScreen.style.display = "none"; //Hide the popup screen if the cookie is not expired.
+        }
+        else{
+          popupScreen.style.display = "flex"; //Show the popup screen if the cookie is expired.
+        }
+        </script>
+</body>
+</html>
